@@ -1,17 +1,26 @@
-<% content_for :extend_javascripts do %>
-<% end %>
-
-<%= content_for :actual_and_calendar do %>
-  <%= render :partial => 'regions/actual_and_calendar' if @actual || @calendar %>
-<% end %>
-
 <% content_for :content do %>
-  <%= render :partial => 'regions/governor_comments' if @governor_comments %>
-  <%= render_partial_for_region(@news) if @news %>
-<% end %>
-
-<% content_for :map_region do %>
-  <%= raw @map_region.content.body if @map_region %>
+  <div class="two_columns">
+    <div class="left">
+      <% if content_for?(:custom_page_title) %>
+        <%= yield(:custom_page_title) %>
+      <% else %>
+        <% if @content_first %>
+          <% if @content_first.part_title.present? %>
+            <%= content_tag :h1 do %>
+              <%= @content_first.part_title %>
+              <%= yield(:item_title) %>
+            <% end %>
+          <% else %>
+            <%= content_tag :h1, @page_title %>
+          <% end %>
+          <%= render_partial_for_region(@content_first) %>
+        <% end %>
+      <% end %>
+    </div>
+    <div class="right">
+      <%= render_partial_for_region(@news) %>
+    </div>
+  </div>
 <% end %>
 
 <%= render :template => 'layouts/application' %>
