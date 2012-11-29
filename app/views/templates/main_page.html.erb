@@ -17,8 +17,12 @@
         <% end %>
       <% end %>
     </div>
-    <div class="right">
-      <%= render_partial_for_region(@news) %>
+    <div class="right_side">
+      <div class="right_side_facts">
+        <h4>Новости</h4>
+        <%= render_partial_for_region(@news) %>
+        <div class="right_side_bottom"></div>
+      </div>
     </div>
   </div>
 <% end %>
