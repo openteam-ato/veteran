@@ -1,4 +1,17 @@
 <% content_for :content do %>
+  <% if content_for?(:custom_page_title) %>
+    <%= yield(:custom_page_title) %>
+  <% else %>
+    <% if @content_first %>
+      <% if @content_first.part_title.present? %>
+        <%= content_tag :h1 do %>
+          <%= @content_first.part_title %>
+        <% end %>
+      <% else %>
+        <%= content_tag :h1, @page_title %>
+      <% end %>
+    <% end %>
+  <% end %>
   <div class="article">
     <%= render "regions/#{@content_first.type.underscore}", :object => @content_first.content.values.first['children'] if @content_first %>
   </div>

@@ -2,6 +2,11 @@
 <% end %>
 
 <% content_for :content do %>
+  <%= content_tag :h1 do %>
+    <%= @content_first.part_title %>
+    <%= yield(:item_title) %>
+  <% end %>
+
   <div class="blue_pages">
     <%= render :partial => 'commons/chief', :locals => { :object => @content_first.content.items.first } if @content_first.content.items %>
 
