@@ -276,14 +276,18 @@
 
     ul
       +clearfix
-      counter-reset: li
       padding: 14px 11px 0 11px
 
       li
         +clearfix
+        +min-height(0)
         color: #4D4D4D
         font-size: 14px
         line-height: 20px
         margin: 0 0 10px 0
-        position: relative
-
+        padding-bottom: 10px
+        img
+          float: right
+          margin: 10px 0 10px 10px
+        &.last
+          padding-bottom: 0

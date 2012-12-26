@@ -1,9 +1,4 @@
 <div class="news_list">
-  <h2>
-    <%= link_to object.title, object.collection_link if /\/$/ === request.fullpath %>
-    <%= link_to "RSS", object.rss_link, :class => 'rss' %>
-  </h2>
-
   <ul>
     <% object.items.each_slice(3) do |slice| %>
       <% slice.each_with_index do |item, index| %>
@@ -27,10 +22,4 @@
       <% end %>
     <% end %>
   </ul>
-
-  <% if object.pagination %>
-    <% @array = object.items %>
-    <% @array = Kaminari.paginate_array(@array, :total_count => object.pagination.total_count).page(object.pagination.current_page).per(object.pagination.per_page) %>
-    <%= paginate @array, :outer_window => 3 %>
-  <% end %>
 </div>

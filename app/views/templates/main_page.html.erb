@@ -21,7 +21,9 @@
       <div class="right_side_news">
         <h4>
           Новости
-          <span class="rss"></span>
+          <span class="rss">
+            <%= link_to "RSS", @news.content.rss_link, :class => 'rss' %>
+          </span>
         </h4>
         <%= render_partial_for_region(@news) %>
         <div class="right_side_bottom"></div>
