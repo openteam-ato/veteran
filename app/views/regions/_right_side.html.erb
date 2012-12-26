@@ -15,9 +15,8 @@
 
 <% if @right_side_facts %>
   <div class="right_side_facts">
-    <h4>Факты</h4>
+    <h4><%= @right_side_facts.part_title %></h4>
     <%= @right_side_facts.content.body.html_safe %>
-    <div class="right_side_bottom"></div>
   </div>
 <% end %>
 
