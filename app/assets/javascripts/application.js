@@ -6,6 +6,8 @@
  *
  * = require jquery
  * = require collapser
+ * = require jcarousel
+ * = require galleria
  * = require main
  *
 */
