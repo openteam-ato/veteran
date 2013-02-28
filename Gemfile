@@ -2,7 +2,6 @@ source 'https://rubygems.org'
 
 group :assets do
   gem 'coffee-rails'
-  gem 'therubyracer'                                unless RUBY_PLATFORM =~ /freebsd/
   gem 'uglifier'
 end
 
@@ -29,4 +28,5 @@ end
 
 group :development do
   gem 'rvm-capistrano'
+  gem 'therubyracer'
 end
