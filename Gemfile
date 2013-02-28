@@ -1,4 +1,4 @@
-source :rubygems
+source 'https://rubygems.org'
 
 group :assets do
   gem 'coffee-rails'
@@ -21,4 +21,12 @@ group :default do
   gem 'sass-rails'
   gem 'stop_ie'
   gem 'uuid'
+end
+
+group :production do
+  gem 'unicorn'
+end
+
+group :development do
+  gem 'rvm-capistrano'
 end
