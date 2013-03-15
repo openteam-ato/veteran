@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 group :assets do
   gem 'coffee-rails'
+  gem 'turbo-sprockets-rails3'
   gem 'uglifier'
 end
 
