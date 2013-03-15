@@ -29,5 +29,4 @@ end
 group :development do
   gem 'brakeman'
   gem 'rvm-capistrano'
-  gem 'therubyracer'
 end
