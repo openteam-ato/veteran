@@ -29,5 +29,6 @@ end
 
 group :development do
   gem 'brakeman'
-  gem 'rvm-capistrano'
+  gem 'openteam-capistrano'
+  gem 'capistrano-unicorn'
 end
