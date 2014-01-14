@@ -13,7 +13,7 @@ group :default do
   gem 'esp-commons'
   gem 'formtastic'
   gem 'hashie'
-  gem 'jquery-rails'
+  gem 'jquery-rails', '2.1.4'
   gem 'kaminari'
   gem 'openteam-commons'
   gem 'rails', '~> 3.2.12'
