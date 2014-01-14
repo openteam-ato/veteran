@@ -28,7 +28,7 @@ group :production do
 end
 
 group :development do
-  gem 'brakeman'
+  gem 'brakeman', :require => false
   gem 'openteam-capistrano'
   gem 'capistrano-unicorn'
 end
