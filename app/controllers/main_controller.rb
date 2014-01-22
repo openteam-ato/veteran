@@ -9,6 +9,7 @@ class MainController < ApplicationController
     end
 
     @page_title = page.title
+    @link_to_json = remote_url
 
     render "templates/#{page.template}"
   end
@@ -20,9 +21,6 @@ class MainController < ApplicationController
 
     def remote_url
       request_path, parts_params = request.fullpath.split('?')
-
-      # TODO: выяснить нужно ли энкодить
-      #parts_params = URI.encode(parts_params || '')
 
       "#{cms_address}#{request_path.split('/').compact.join('/')}.json?#{parts_params}"
     end

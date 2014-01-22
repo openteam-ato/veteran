@@ -112,6 +112,11 @@
   <!-- Yandex.Metrika counter -->
   <!-- /Yandex.Metrika counter -->
   <% end %>
+  <% if Rails.env.development? %>
+    <center style='margin: 30px'>
+      <%= link_to "Ссылка на json", @link_to_json, :target => '_blank' %>
+    </center>
+  <% end %>
 
 </body>
 </html>
