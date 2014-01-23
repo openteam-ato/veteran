@@ -9,5 +9,6 @@
  * = require jcarousel
  * = require galleria
  * = require main
+ * = require reports
  *
 */
