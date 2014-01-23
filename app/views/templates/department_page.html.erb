@@ -8,7 +8,11 @@
   <% end %>
 
   <div class="blue_pages">
-    <%= render :partial => 'commons/chief', :locals => { :object => @content_first.content.items.first } if @content_first.content.items %>
+    <div class='right_side'>
+      <%= render(:partial => 'regions/right_side') if @right_side_navigation || @right_side_links || @right_side_charts || @right_side_facts %>
+
+      <%= render :partial => 'commons/chief', :locals => { :object => @content_first.content.items.first } if @content_first.content.items %>
+    </div>
 
     <% if @links %>
       <div class="links">
