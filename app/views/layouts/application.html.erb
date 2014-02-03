@@ -2,7 +2,6 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <meta name='yandex-verification' content='5b82f8c9e9140b58' />
   <%= favicon_link_tag %>
   <title><%= raw @page_title %> | <%= strip_tags(@site_name.content.body) %></title>
 
@@ -101,7 +100,7 @@
       <div class="copyrights">
         <ul>
           <li>Разработка: <a href="http://openteam.ru">OpenTeam</a></li>
-          <% if Rails.env.production? && request.host.eql?("veteran.tomsk.gov.ru") %>
+          <% if Rails.env.production? && request.host.eql?('veteran.tomsk.gov.ru') %>
             <li>
               <!-- Yandex.Metrika informer -->
               <a href="http://metrika.yandex.ru/stat/?id=23831170&amp;from=informer"
@@ -116,8 +115,9 @@
   </div>
 
   <!-- <%= request.host %> -->
+  <!-- <%= Rails.env.production? %> -->
 
-  <% if Rails.env.production? && request.host.eql?("veteran.tomsk.gov.ru") %>
+  <% if Rails.env.production? && request.host.eql?('veteran.tomsk.gov.ru') %>
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript">
     (function (d, w, c) {
