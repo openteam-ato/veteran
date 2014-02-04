@@ -1,5 +1,6 @@
 $ ->
   init_galleria()          if $("#galleria").length
+  init_jcarousel()         if $('.banners_block').length
 
   if $(".need_collapser").length
     init_collapser()
