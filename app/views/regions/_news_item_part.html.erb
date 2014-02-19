@@ -9,21 +9,11 @@
       </div>
     <% end %>
 
-    <% if object.more_like_this %>
       <div class="more_like_this noindex">
-        <h2>Другие новости</h2>
-        <ul>
-          <% object.more_like_this.each do |item| %>
-            <li>
-              <div class="date">
-                <%= l item.since.to_date, :format => :long %>
-              </div>
-              <%= link_to item.title, item.link %>
-            </li>
-          <% end %>
-        </ul>
+        <%= link_to '/ru/deyatelnost/novosti-soveta-veteranov/' do %>
+          <h2>Другие новости</h2>
+        <% end %>
       </div>
-    <% end %>
   </div>
 
   <div class="date">
